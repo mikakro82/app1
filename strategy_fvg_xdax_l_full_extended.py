@@ -6,7 +6,7 @@ from telegram_notifier import send_telegram_signal, update_signal_result, send_d
 # 📈 ETF-Daten laden
 def get_dax_etf_xdax(interval='60m'):
     try:
-        ticker = yf.Ticker("XDAX.L")
+        ticker = yf.Ticker("^GDAXI")
         df = ticker.history(period="1d", interval=interval)
         if df.empty:
             print("⚠️ Keine Daten empfangen für XDAX.L.")
