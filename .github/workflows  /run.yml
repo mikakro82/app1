@@ -1,1 +1,55 @@
 
+name: DAX-Bot 11:30–14:30 Uhr DE
+
+on:
+  schedule:
+    - cron: '30 9 * * 1-5'
+    - cron: '40 9 * * 1-5'
+    - cron: '50 9 * * 1-5'
+    - cron: '0 10 * * 1-5'
+    - cron: '10 10 * * 1-5'
+    - cron: '20 10 * * 1-5'
+    - cron: '30 10 * * 1-5'
+    - cron: '40 10 * * 1-5'
+    - cron: '50 10 * * 1-5'
+    - cron: '0 11 * * 1-5'
+    - cron: '10 11 * * 1-5'
+    - cron: '20 11 * * 1-5'
+    - cron: '30 11 * * 1-5'
+    - cron: '40 11 * * 1-5'
+    - cron: '50 11 * * 1-5'
+    - cron: '0 12 * * 1-5'
+    - cron: '10 12 * * 1-5'
+    - cron: '20 12 * * 1-5'
+    - cron: '30 12 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  run-dax-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+
+      - name: 🐍 Python 3.10 installieren
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 💾 Cache pip-Abhängigkeiten
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: 🚀 Bot ausführen
+        run: python -u Dax.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
