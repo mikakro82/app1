@@ -1,0 +1,134 @@
+name: Alle 10 Minuten Mo–Fr (08–21 Uhr DE)
+
+on:
+  schedule:
+    # 10-Minuten-Takt von 06:00–19:50 UTC (08:00–21:50 Uhr DE), Mo–Fr
+    - cron: '0 6 * * 1-5'    # 08:00 Uhr
+    - cron: '10 6 * * 1-5'   # 08:10 Uhr
+    - cron: '20 6 * * 1-5'   # 08:20 Uhr
+    - cron: '30 6 * * 1-5'   # 08:30 Uhr
+    - cron: '40 6 * * 1-5'   # 08:40 Uhr
+    - cron: '50 6 * * 1-5'   # 08:50 Uhr
+
+    - cron: '0 7 * * 1-5'    # 09:00 Uhr
+    - cron: '10 7 * * 1-5'   # 09:10 Uhr
+    - cron: '20 7 * * 1-5'   # 09:20 Uhr
+    - cron: '30 7 * * 1-5'   # 09:30 Uhr
+    - cron: '40 7 * * 1-5'   # 09:40 Uhr
+    - cron: '50 7 * * 1-5'   # 09:50 Uhr
+
+    - cron: '0 8 * * 1-5'    # 10:00 Uhr
+    - cron: '10 8 * * 1-5'   # 10:10 Uhr
+    - cron: '20 8 * * 1-5'   # 10:20 Uhr
+    - cron: '30 8 * * 1-5'   # 10:30 Uhr
+    - cron: '40 8 * * 1-5'   # 10:40 Uhr
+    - cron: '50 8 * * 1-5'   # 10:50 Uhr
+
+    - cron: '0 9 * * 1-5'    # 11:00 Uhr
+    - cron: '10 9 * * 1-5'   # 11:10 Uhr
+    - cron: '20 9 * * 1-5'   # 11:20 Uhr
+    - cron: '30 9 * * 1-5'   # 11:30 Uhr
+    - cron: '40 9 * * 1-5'   # 11:40 Uhr
+    - cron: '50 9 * * 1-5'   # 11:50 Uhr
+
+    - cron: '0 10 * * 1-5'   # 12:00 Uhr
+    - cron: '10 10 * * 1-5'  # 12:10 Uhr
+    - cron: '20 10 * * 1-5'  # 12:20 Uhr
+    - cron: '30 10 * * 1-5'  # 12:30 Uhr
+    - cron: '40 10 * * 1-5'  # 12:40 Uhr
+    - cron: '50 10 * * 1-5'  # 12:50 Uhr
+
+    - cron: '0 11 * * 1-5'   # 13:00 Uhr
+    - cron: '10 11 * * 1-5'  # 13:10 Uhr
+    - cron: '20 11 * * 1-5'  # 13:20 Uhr
+    - cron: '30 11 * * 1-5'  # 13:30 Uhr
+    - cron: '40 11 * * 1-5'  # 13:40 Uhr
+    - cron: '50 11 * * 1-5'  # 13:50 Uhr
+
+    - cron: '0 12 * * 1-5'   # 14:00 Uhr
+    - cron: '10 12 * * 1-5'  # 14:10 Uhr
+    - cron: '20 12 * * 1-5'  # 14:20 Uhr
+    - cron: '30 12 * * 1-5'  # 14:30 Uhr
+    - cron: '40 12 * * 1-5'  # 14:40 Uhr
+    - cron: '50 12 * * 1-5'  # 14:50 Uhr
+
+    - cron: '0 13 * * 1-5'   # 15:00 Uhr
+    - cron: '10 13 * * 1-5'  # 15:10 Uhr
+    - cron: '20 13 * * 1-5'  # 15:20 Uhr
+    - cron: '30 13 * * 1-5'  # 15:30 Uhr
+    - cron: '40 13 * * 1-5'  # 15:40 Uhr
+    - cron: '50 13 * * 1-5'  # 15:50 Uhr
+
+    - cron: '0 14 * * 1-5'   # 16:00 Uhr
+    - cron: '10 14 * * 1-5'  # 16:10 Uhr
+    - cron: '20 14 * * 1-5'  # 16:20 Uhr
+    - cron: '30 14 * * 1-5'  # 16:30 Uhr
+    - cron: '40 14 * * 1-5'  # 16:40 Uhr
+    - cron: '50 14 * * 1-5'  # 16:50 Uhr
+
+    - cron: '0 15 * * 1-5'   # 17:00 Uhr
+    - cron: '10 15 * * 1-5'  # 17:10 Uhr
+    - cron: '20 15 * * 1-5'  # 17:20 Uhr
+    - cron: '30 15 * * 1-5'  # 17:30 Uhr
+    - cron: '40 15 * * 1-5'  # 17:40 Uhr
+    - cron: '50 15 * * 1-5'  # 17:50 Uhr
+
+    - cron: '0 16 * * 1-5'   # 18:00 Uhr
+    - cron: '10 16 * * 1-5'  # 18:10 Uhr
+    - cron: '20 16 * * 1-5'  # 18:20 Uhr
+    - cron: '30 16 * * 1-5'  # 18:30 Uhr
+    - cron: '40 16 * * 1-5'  # 18:40 Uhr
+    - cron: '50 16 * * 1-5'  # 18:50 Uhr
+
+    - cron: '0 17 * * 1-5'   # 19:00 Uhr
+    - cron: '10 17 * * 1-5'  # 19:10 Uhr
+    - cron: '20 17 * * 1-5'  # 19:20 Uhr
+    - cron: '30 17 * * 1-5'  # 19:30 Uhr
+    - cron: '40 17 * * 1-5'  # 19:40 Uhr
+    - cron: '50 17 * * 1-5'  # 19:50 Uhr
+
+    - cron: '0 18 * * 1-5'   # 20:00 Uhr
+    - cron: '10 18 * * 1-5'  # 20:10 Uhr
+    - cron: '20 18 * * 1-5'  # 20:20 Uhr
+    - cron: '30 18 * * 1-5'  # 20:30 Uhr
+    - cron: '40 18 * * 1-5'  # 20:40 Uhr
+    - cron: '50 18 * * 1-5'  # 20:50 Uhr
+
+    - cron: '0 19 * * 1-5'   # 21:00 Uhr
+    - cron: '10 19 * * 1-5'  # 21:10 Uhr
+    - cron: '20 19 * * 1-5'  # 21:20 Uhr
+    - cron: '30 19 * * 1-5'  # 21:30 Uhr
+    - cron: '40 19 * * 1-5'  # 21:40 Uhr
+    - cron: '50 19 * * 1-5'  # 21:50 Uhr
+
+  workflow_dispatch:
+
+jobs:
+  run-dax-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+
+      - name: 🐍 Python 3.10 installieren
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 💾 Cache pip-Abhängigkeiten
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: 🚀 Bot ausführen
+        run: python -u Dax.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
