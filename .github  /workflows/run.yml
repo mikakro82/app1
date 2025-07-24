@@ -1,0 +1,47 @@
+name: DAX-Bot alle 10 Minuten Mo–Fr (11:30–14:30 Uhr DE)
+
+on:
+  schedule:
+    - cron: '30 9 * * 1-5'    # 11:30 Uhr
+    - cron: '40 9 * * 1-5'    # 11:40 Uhr
+    - cron: '50 9 * * 1-5'    # 11:50 Uhr
+    - cron: '0 10 * * 1-5'    # 12:00 Uhr
+    - cron: '10 10 * * 1-5'   # 12:10 Uhr
+    - cron: '20 10 * * 1-5'   # 12:20 Uhr
+    - cron: '30 10 * * 1-5'   # 12:30 Uhr
+    - cron: '40 10 * * 1-5'   # 12:40 Uhr
+    - cron: '50 10 * * 1-5'   # 12:50 Uhr
+    - cron: '0 11 * * 1-5'    # 13:00 Uhr
+    - cron: '10 11 * * 1-5'   # 13:10 Uhr
+    - cron: '20 11 * * 1-5'   # 13:20 Uhr
+    - cron: '30 11 * * 1-5'   # 13:30 Uhr
+    - cron: '40 11 * * 1-5'   # 13:40 Uhr
+    - cron: '50 11 * * 1-5'   # 13:50 Uhr
+    - cron: '0 12 * * 1-5'    # 14:00 Uhr
+    - cron: '10 12 * * 1-5'   # 14:10 Uhr
+    - cron: '20 12 * * 1-5'   # 14:20 Uhr
+    - cron: '30 12 * * 1-5'   # 14:30 Uhr
+
+  workflow_dispatch:  # Manuell starten
+
+jobs:
+  run-dax-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+
+      - name: 🐍 Python 3.10 installieren
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: 🚀 Bot ausführen
+        run: python Dax.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
